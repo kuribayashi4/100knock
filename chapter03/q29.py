@@ -1,6 +1,7 @@
 import re
 import pprint
 import requests
+from q28 import basic_info_dict
 dict_in_json={}
 def search_json(json, key):
     for k,v in json.items():
@@ -21,5 +22,4 @@ payload = {"action": "query",
            "format": "json",
            "iiprop": "url"}
 json_data = requests.get(url, params=payload).json()
-print(json_data) 
 print(search_json(json_data,"url"))
