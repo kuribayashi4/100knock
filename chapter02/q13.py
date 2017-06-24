@@ -1,0 +1,2 @@
+with open('work/col1.txt', 'r') as f1, open('work/col2.txt', 'r') as f2, open('work/col1_col2.txt', 'w') as f3:
+        f3.write("".join([col1.rstrip('\n') + '\t' + col2 for col1,col2 in zip(f1, f2)])) #勝手に改行が入ってしまうので.rstrip('\n')で除去

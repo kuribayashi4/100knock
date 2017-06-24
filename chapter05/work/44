@@ -1,0 +1,12 @@
+digraph {
+	node [shape=circle]
+	0 [label="どこで"]
+		0 -> 1
+	1 [label="生れたか"]
+		1 -> 4
+	2 [label="とんと"]
+		2 -> 4
+	3 [label="見当が"]
+		3 -> 4
+	4 [label="つかぬ"]
+}
