@@ -1,3 +1,4 @@
+import xml.etree.ElementTree as ET
 import sexpr
 def parse():
     tree = ET.parse('work/nlp.txt.xml')

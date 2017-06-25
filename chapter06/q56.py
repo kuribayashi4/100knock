@@ -11,13 +11,3 @@ for coref in root.findall('.//coreference/coreference'):
         root.find(".//sentence[@id='{}']/tokens/token[@id='{}']".format(i_sent, i_end))[0].text \
         = word_end + ")"
 tree.write('work/nlp_coreference.txt.xml')
-
-#出力の整形
-with open('work/nlp_coreferene.txt', 'w') as f:
-    tree = ET.parse('work/nlp_coreference.txt.xml')
-    root = tree.getroot()
-    for sentence in root.iter('sentence'):
-        for word in sentence.iter('word'):
-            f.write(word.text + " ")
-        f.write("\n")
-! gsed -E "s/\s(\W)/\1/g" work/nlp_coreferene.txt
